@@ -1,4 +1,33 @@
 " ===
+" === Auto load for first time uses
+" ===
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" ====================
+" === Editor Setup ===
+" ====================
+
+" ===
+" === System
+" ===
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set mouse=a
+set encoding=utf-8
+
+set clipboard=unnamed
+
+" Prevent incorrect backgroung rendering
+let &t_ut=''
+
+" ===
 " === Main code disply
 " ===
 set number
