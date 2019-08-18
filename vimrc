@@ -19,7 +19,7 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-set mouse=a
+"set mouse=a
 set encoding=utf-8
 
 set clipboard=unnamed
